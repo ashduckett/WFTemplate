@@ -1,7 +1,7 @@
 .scrollerElement {
     display: inline-block;
     position: absolute;
-    width: 33.33%;
+    width: 33.4%;
     height: 100%;
 }
 
@@ -45,9 +45,4 @@
 
 .scroller i.arrow:hover {
     border-width: 0 3px 3px 0;
-}
-
-.scroller .scrollerElement img {
-    /*max-height: 100%;
-    max-width: 100%;*/
 }
