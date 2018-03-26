@@ -94,7 +94,7 @@ jQuery.fn.scroller = function(scrollElements) {
  
     $(this).append(arrowContainer);
 
-    var duration = 500;
+    var duration = 1000;
 
 
     $('.leftControl').click(function() {
@@ -112,9 +112,7 @@ jQuery.fn.scroller = function(scrollElements) {
                         
                         $(this).animate({
                             left: '83.33%'
-                        }, duration / 2, 'linear', function() {
-            
-                        });
+                        }, duration / 2, 'linear');
                     });
                     break;
                 case '16.665%':
