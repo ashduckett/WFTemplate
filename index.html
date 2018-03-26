@@ -184,56 +184,27 @@
             return opacityBg;
         }
 
-         var overlay1 = document.createElement('div');
-        overlay1.style.position = 'absolute';
-        overlay1.style.top = '0';
-        overlay1.style.left = '0';
-        overlay1.style.width = '100%';
-        overlay1.style.height = '100%';
-        overlay1.style.backgroundImage = 'url(img/no1.png)';
-        overlay1.style.backgroundSize = '30%';
-        overlay1.style.backgroundPosition = 'center';
-        overlay1.style.backgroundRepeat = 'no-repeat';
+        function createImageOverlay(imageName) {
+            var overlay = document.createElement('div');
+            overlay.style.position = 'absolute';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundImage = 'url(img/' + imageName + ')';
+            overlay.style.backgroundSize = '30%';
+            overlay.style.backgroundPosition = 'center';
+            overlay.style.backgroundRepeat = 'no-repeat';
+            return overlay;
+        }
 
-        var overlay2 = document.createElement('div');
-        overlay2.style.position = 'absolute';
-        overlay2.style.top = '0';
-        overlay2.style.left = '0';
-        overlay2.style.width = '100%';
-        overlay2.style.height = '100%';
-        overlay2.style.backgroundImage = 'url(img/no2.png)';
-        overlay2.style.backgroundSize = '30%';
-        overlay2.style.backgroundPosition = 'center';
-        overlay2.style.backgroundRepeat = 'no-repeat';
 
-        var overlay3 = document.createElement('div');
-        overlay3.style.position = 'absolute';
-        overlay3.style.top = '0';
-        overlay3.style.left = '0';
-        overlay3.style.width = '100%';
-        overlay3.style.height = '100%';
-        overlay3.style.backgroundImage = 'url(img/no3.png)';
-        overlay3.style.backgroundSize = '30%';
-        overlay3.style.backgroundPosition = 'center';
-        overlay3.style.backgroundRepeat = 'no-repeat';
+        $('.slider').slider('£', 50, 10000);
 
-        var overlay4 = document.createElement('div');
-        overlay4.style.position = 'absolute';
-        overlay4.style.top = '0';
-        overlay4.style.left = '0';
-        overlay4.style.width = '100%';
-        overlay4.style.height = '100%';
-        overlay4.style.backgroundImage = 'url(img/no4.png)';
-        overlay4.style.backgroundSize = '30%';
-        overlay4.style.backgroundPosition = 'center';
-        overlay4.style.backgroundRepeat = 'no-repeat';
-
-$('.slider').slider('£', 50, 10000);
-
-        var scrollElementOne = new ScrollElement('scroller1.jpeg', [createOpacityOverlay(), overlay1]);
-        var scrollElementTwo = new ScrollElement('scroller2.jpeg', [createOpacityOverlay(), overlay2]);
-        var scrollElementThree = new ScrollElement('scroller3.jpeg', [createOpacityOverlay(), overlay3]);
-        var scrollElementFour = new ScrollElement('scroller4.jpeg', [createOpacityOverlay(), overlay4]);
+        var scrollElementOne = new ScrollElement('scroller1 - Copy.jpeg', [createOpacityOverlay(), createImageOverlay('no1.png')]);
+        var scrollElementTwo = new ScrollElement('scroller2.jpeg', [createOpacityOverlay(), createImageOverlay('no2.png')]);
+        var scrollElementThree = new ScrollElement('scroller3.jpeg', [createOpacityOverlay(), createImageOverlay('no3.png')]);
+        var scrollElementFour = new ScrollElement('scroller4.jpeg', [createOpacityOverlay(), createImageOverlay('no4.png')]);
 
         $('.scroller').scroller([scrollElementOne, scrollElementTwo, scrollElementThree, scrollElementFour]);
 
