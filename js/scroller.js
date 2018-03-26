@@ -11,8 +11,8 @@ jQuery.fn.scroller = function(scrollElements) {
         element.classList.add('scrollerElement');
 
         var image = document.createElement('img');
-        image.style.maxWidth = '100%';
-        image.style.height = 'auto';
+        //image.style.maxWidth = '100%';
+        //image.style.height = 'auto';
         image.src = 'img/' + scrollElements[i].imagePath;
         image.classList.add('scrollerImage');
         element.appendChild(image);
@@ -78,13 +78,16 @@ jQuery.fn.scroller = function(scrollElements) {
     var image = $('.scrollerElement');
     
     $(window).resize(function() {
-        $('.scroller').css('height', image.css('height'));
-        $('.scrollerOverlay').css('height', image.css('height'));
+        $('.scroller').css('height', image.css('width'));
+        $('.scrollerOverlay').css('height', image.css('width'));
     });
 
     $(document).ready(function() {
-        $('.scroller').css('height', image.css('height'));
-        $('.scrollerOverlay').css('height', image.css('height'));
+        // This should be making the scroller the same height as the first scroller element
+        // You should actually define this yourself, and just make it a square. So base it on the width of
+        // each scroller element so they are the same? Giving you squares?
+        $('.scroller').css('height', image.css('width'));
+        $('.scrollerOverlay').css('height', image.css('width'));
     });
  
     $(this).append(arrowContainer);
