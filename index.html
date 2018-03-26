@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scroller.css">
+    <link rel="stylesheet" href="css/ComboBox.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/Draggable.js"></script>
+    <script src="js/Slider.js"></script>
+    <script src="js/ComboBox.js"></script>
+    <script src="js/scroller.js"></script>
+    <title>Western Flooring</title>
+</head>
+<body>
+    <div id="initial-bg">
+        <div class="initial-bg-overlay"></div>
+        <nav>
+            <div class="branding vertical-center">
+                Western Flooring
+            </div>
+            <ul class="vertical-center">
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div id="initical-bg-centerpiece" class="vertical-center">
+            <div class="vertical-center">
+                <div class="standard-section-text">
+                    Carpet and flooring supplied
+                    and fitted since 1987.
+                </div>
+                <a class="btn" href="#">View our showroom</a>
+            </div>
+            
+        </div>
+        <div class="initial-bg-more">
+            <div class="seeMore standard-section-text">See More</div>
+            <div class="moreArrowContainer">
+                    <i class="arrow down "></i>
+            </div>
+        </div>
+    </div>
+    <div class="scroller"></div>
+    <div class="text-only">
+        <div class="container vertical-center">
+            <div class="header standard-header">
+                High Quality Laminate, Carpet, Wood & Vinyl
+            </div>
+            <div class="text standard-section-text">
+                For domestic and commercial projects. Very competitive prices, trade accounts available on application.
+            </div>
+            <a class="btn" href="#">Learn More</a>
+        </div>
+    </div>
+    <div class="who-we-are">
+        <img class="who-we-are-image" src="img/whoarewe.jpeg">
+        <div class="overlay">
+            <div class="container vertical-center">
+                <div class="standard-header">
+                    Who are we?
+                </div>
+                <div class="standard-section-text">
+                    For domestic and commercial projects.
+                    Very competitive prices, trade accounts
+                    available on application.
+                </div>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="which-floor">
+        <div class="left-side">
+            <div class="container vertical-center">
+                <div class="standard-header">
+                    What floor is best for your room?
+                </div>
+                <div class="text standard-section-text">
+                    For domestic and commercial projects.
+                    Very competitive prices, trade accounts
+                    available on application.
+                </div>
+                <a href="#" class="btn">See More</a>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="cardfan">
+                <img src="img/brochure.jpg">
+                <img src="img/brochure.jpg">
+                <img src="img/brochure.jpg">
+                <img src="img/brochure.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="see-our-work">
+        <img class="see-our-work-image" src="img/seeourwork.png">
+        <div class="see-our-work-overlay">
+            <div class="left">
+                <a href="#" class="btn">View Project</a>
+            </div>
+            <div class="right">
+                <div class="container vertical-center">
+                    <div class="standard-header">
+                        SEE OUR WORK
+                    </div>
+                    <div class="standard-header-text">
+                        For domestic and commercial projects.
+                        Very competitive prices, trade accounts
+                        available on application.
+                    </div>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="header">
+            <div class="standard-header heading">
+                Get a quote
+            </div>
+            <div class="standard-section-text">
+                We want to learn as much as we can about what it is you need from us.
+            </div>
+        </div>
+        <div class="row1">
+            <div class="rowLeftCol">
+                <label class="label">Name</label>
+                <input placeholder="western flooring" class="control"></input>
+            </div>
+           
+            <div class="rowRightCol">
+                <label class="label">Email</label>
+                <input placeholder="hello@westernflooring.co.uk" class="control"></input>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="rowLeftCol">
+                <label class="label">Telephone</label>
+                <input placeholder="01935 473 121" class="control"></input>
+            </div>
+            <div class="rowRightCol">
+                <label class="label">Type of business</label>
+                <div class="combo-box business-type control"></div>
+            </div>
+        </div>
+        <div class="row3">
+                <label class="label">Flooring Style</label>
+                <div class="combo-box flooring-style control"></div>
+
+        </div>
+        <div class="row4">
+                <label class="label">What's your budget?</label>
+                <div class="slider control"></div>
+        </div>
+        <div class="row5">
+                <label class="label">What room?</label>
+                <div class="combo-box which-room control"></div>
+        </div>
+        <div class="row6">
+                <a href="#" class="btn enquire">Enquire</a>
+            </div>        
+    </div>
+
+<script>
+     function createOpacityOverlay() {
+            var opacityBg = document.createElement('div');
+            opacityBg.style.position = 'absolute';
+            opacityBg.style.top = '0';
+            opacityBg.style.left = '0';
+            opacityBg.style.width = '100%';
+            opacityBg.style.height = '100%';
+            opacityBg.style.backgroundColor = 'black';
+            opacityBg.style.backgroundSize = '50%';
+            opacityBg.style.backgroundPosition = 'center';
+            opacityBg.style.backgroundRepeat = 'no-repeat';
+            opacityBg.style.opacity = '0.5';
+
+            return opacityBg;
+        }
+
+         var overlay1 = document.createElement('div');
+        overlay1.style.position = 'absolute';
+        overlay1.style.top = '0';
+        overlay1.style.left = '0';
+        overlay1.style.width = '100%';
+        overlay1.style.height = '100%';
+        overlay1.style.backgroundImage = 'url(img/no1.png)';
+        overlay1.style.backgroundSize = '30%';
+        overlay1.style.backgroundPosition = 'center';
+        overlay1.style.backgroundRepeat = 'no-repeat';
+
+        var overlay2 = document.createElement('div');
+        overlay2.style.position = 'absolute';
+        overlay2.style.top = '0';
+        overlay2.style.left = '0';
+        overlay2.style.width = '100%';
+        overlay2.style.height = '100%';
+        overlay2.style.backgroundImage = 'url(img/no2.png)';
+        overlay2.style.backgroundSize = '30%';
+        overlay2.style.backgroundPosition = 'center';
+        overlay2.style.backgroundRepeat = 'no-repeat';
+
+        var overlay3 = document.createElement('div');
+        overlay3.style.position = 'absolute';
+        overlay3.style.top = '0';
+        overlay3.style.left = '0';
+        overlay3.style.width = '100%';
+        overlay3.style.height = '100%';
+        overlay3.style.backgroundImage = 'url(img/no3.png)';
+        overlay3.style.backgroundSize = '30%';
+        overlay3.style.backgroundPosition = 'center';
+        overlay3.style.backgroundRepeat = 'no-repeat';
+
+        var overlay4 = document.createElement('div');
+        overlay4.style.position = 'absolute';
+        overlay4.style.top = '0';
+        overlay4.style.left = '0';
+        overlay4.style.width = '100%';
+        overlay4.style.height = '100%';
+        overlay4.style.backgroundImage = 'url(img/no4.png)';
+        overlay4.style.backgroundSize = '30%';
+        overlay4.style.backgroundPosition = 'center';
+        overlay4.style.backgroundRepeat = 'no-repeat';
+
+$('.slider').slider('£', 50, 10000);
+
+        var scrollElementOne = new ScrollElement('scroller1.jpeg', [createOpacityOverlay(), overlay1]);
+        var scrollElementTwo = new ScrollElement('scroller2.jpeg', [createOpacityOverlay(), overlay2]);
+        var scrollElementThree = new ScrollElement('scroller3.jpeg', [createOpacityOverlay(), overlay3]);
+        var scrollElementFour = new ScrollElement('scroller4.jpeg', [createOpacityOverlay(), overlay4]);
+
+        $('.scroller').scroller([scrollElementOne, scrollElementTwo, scrollElementThree, scrollElementFour]);
+
+
+        $('.combo-box.business-type').combo('HOME', ['Commercial', 'Home']);
+        $('.combo-box.flooring-style').combo('WE\'VE GOT SO MUCH CHOICE, BUT SOMETIMES YOU KNOW WHAT YOU\'RE AFTER', ['Laminate', 'Hardwood', 'Stone', 'Tile', 'Carpet']);
+        $('.combo-box.which-room').combo('IF WE KNOW WHAT ROOM, WE CAN ADVISE YOU ON WHAT MIGHT WORK FOR YOU', ['Living Room', 'Bedroom', 'Bathroom', 'Kitchen', 'Hall', 'Landing']);
+</script>
+</body>
+
+
+</html>

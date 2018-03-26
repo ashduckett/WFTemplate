@@ -1,0 +1,67 @@
+.sliderControl {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(244, 244, 244);
+    position: relative;
+    border: 1px black solid;
+}
+
+.slidingElement {
+    height: 100%;
+    width: 40px;
+    z-index: 10;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.progressSide {
+    position: absolute;
+    background-color: rgb(26, 181, 176);
+    border: none;
+    /* top: -1px;
+    left: -1px; */
+}
+
+.valueContainer {
+    z-index: 100;
+}
+
+#val {
+    position: absolute;
+    color: white;
+}
+
+.vertical-center {
+    position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slidingElement .arrowContainer i {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+
+    padding: 5px;
+    position: absolute;
+    left: 4px;
+}
+
+.sliderControl .right {
+    top: 50%;
+    transform: rotate(-45deg) translateY(-50%);
+    -webkit-transform: rotate(-45deg) translateY(-50%);
+}
+
+.sliderControl .arrowContainer {
+    margin: auto;
+    height: 50%;
+    width: 50%;
+    text-align: center;
+}
+
+.slider {
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
