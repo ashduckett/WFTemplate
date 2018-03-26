@@ -11,8 +11,10 @@ jQuery.fn.scroller = function(scrollElements) {
         element.classList.add('scrollerElement');
 
         var image = document.createElement('img');
-        //image.style.maxWidth = '100%';
-        //image.style.height = 'auto';
+        image.style.width = '100%';
+        image.style.height = '100%';
+        
+        
         image.src = 'img/' + scrollElements[i].imagePath;
         image.classList.add('scrollerImage');
         element.appendChild(image);
