@@ -18,6 +18,7 @@ body, html {
 #initical-bg-centerpiece .standard-section-text {
     font-size: 2.5em;
     color: white;
+    font-family: myriad-regular;
 }
 
 #initical-bg-centerpiece .btn {
@@ -76,13 +77,18 @@ nav ul li {
 }
 
 @font-face {
+    font-family: myriad-regular;
+    src: url('../fonts/Myriad Pro Regular.ttf');
+}
+
+@font-face {
     font-family: semplicita-medium;
     src: url('../fonts/semplicita.medium.otf');
 }
 
-div {
+ div {
      font-family: semplicita-medium; 
-}
+} 
 
 .initial-bg-overlay {
     position: absolute;
@@ -221,19 +227,14 @@ div {
 }
 
 .cardfan img {
-    /* max-width: 250px;  */
-    /* max-height: 85%; */
-    /* position: relative; */
     display: block;
     margin: auto;
     max-height: 100%;
     max-width: 100%;
-
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
-
 
 .see-our-work {
     position: relative;
@@ -286,8 +287,6 @@ div {
     margin-left: 55%;
     
 }
-
-
 
 .contact {
     box-sizing: border-box;
@@ -410,6 +409,8 @@ a.btn.enquire {
     position: absolute;
     transform: translateY(-100%) translateX(-50%);
 }
+
+
 
 .moreArrowContainer {
     height: 30px;
