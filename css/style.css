@@ -35,6 +35,7 @@ body, html {
 
 nav {
     height: 50px;
+    padding: 10px 30px;
 }
 
 .vertical-center {
@@ -53,23 +54,22 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    float: right;
 }
 
 nav ul li {
     display: inline;
     text-transform: uppercase;
-    padding-right: 30px;
-    padding-left: 30px;
     color: white;
 
 }
 
 .branding {
-    display: inline-block;
-    padding-left: 30px;
     text-transform: uppercase;
     color: white;
+}
+
+.hamburger {
+    cursor: pointer;
 }
 
 @font-face {
@@ -99,6 +99,7 @@ nav ul li {
     left: 0;
     background-color: black;
     opacity: 0.5;
+    display: none;
 
 }
 
@@ -356,6 +357,16 @@ input.control::placeholder {
     letter-spacing: 0.15em;
 }
 
+.hamburger {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+
 @media screen and (max-width: 890px) {
     .row1, .row2 {
         display: block;
@@ -412,7 +423,25 @@ input.control::placeholder {
 
     .see-our-work .right {
         display: none;
-    } 
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.displayed {
+    display: block;
+}
+
+@media screen and (min-width: 890px) {
+    .mobile-menu {
+        display: none;
+    }
 }
 
 .contact .header {
@@ -485,4 +514,35 @@ a.btn.enquire {
     border-width: 0 1px 1px 0;
     display: inline-block;
     padding: 10px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* ----------------- Hamburger Menu ------- */
+.hamburger .line {
+    width: 50px;
+    height: 5px;
+    display: block;
+    background-color: white;
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.is-active .line:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.is-active .line:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
 }

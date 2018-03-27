@@ -20,16 +20,30 @@
     <div id="initial-bg">
         <div class="initial-bg-overlay"></div>
         <nav>
-            <div class="branding vertical-center">
+            <div class="branding">
                 Western Flooring
             </div>
-            <ul class="vertical-center">
+            <ul class="desktop-menu">
                 <li>Home</li>
                 <li>About</li>
                 <li>Gallery</li>
                 <li>Contact</li>
             </ul>
+
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
         </nav>
+
+        <ul class="mobile-menu">
+                <li>Home</li>
+                <li>About</li>
+                <li>Gallery</li>
+                <li>Contact</li>
+            </ul>
+
         <div id="initical-bg-centerpiece" class="vertical-center">
             <div class="vertical-center">
                 <div class="standard-section-text">
@@ -213,6 +227,11 @@
         $('.combo-box.business-type').combo('HOME', ['Commercial', 'Home']);
         $('.combo-box.flooring-style').combo('WE\'VE GOT SO MUCH CHOICE, BUT SOMETIMES YOU KNOW WHAT YOU\'RE AFTER', ['Laminate', 'Hardwood', 'Stone', 'Tile', 'Carpet']);
         $('.combo-box.which-room').combo('IF WE KNOW WHAT ROOM, WE CAN ADVISE YOU ON WHAT MIGHT WORK FOR YOU', ['Living Room', 'Bedroom', 'Bathroom', 'Kitchen', 'Hall', 'Landing']);
+
+        $('.hamburger').click(function() {
+            $(this).toggleClass('is-active');
+            $('.mobile-menu').toggleClass('displayed');
+        });
 </script>
 </body>
 
