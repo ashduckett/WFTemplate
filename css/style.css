@@ -290,6 +290,7 @@ nav ul li {
     position: relative;
     top: 85%;
     margin-left: 55%;
+    width: 10em;
     
 }
 
@@ -384,7 +385,7 @@ input.control::placeholder {
         font-size: 2em;
     }
 
-    .who-we-are-image {
+    .who-we-are-image, .see-our-work .see-our-work-image {
         width: 190%;
     }
 
@@ -394,6 +395,24 @@ input.control::placeholder {
         margin: auto;
         font-family: myriad-regular;
     }
+
+    .which-floor .right-side {
+        display: none;
+    }
+
+    .which-floor .left-side {
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .see-our-work {
+        overflow: hidden;
+    }
+
+    .see-our-work .right {
+        display: none;
+    } 
 }
 
 .contact .header {
