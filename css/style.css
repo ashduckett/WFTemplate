@@ -167,13 +167,15 @@ div {
 }
 
 .which-floor {
-    height: 400px;
+    height: 400px; /* can you kill this? px */
 }
 
 .which-floor .left-side, .which-floor .right-side {
     width: 50%;
+    height: 100%;
     float: left;
-    margin-top: 40px;
+    /* margin-top: 40px; */
+
 }
 
 .which-floor .left-side {
@@ -182,7 +184,7 @@ div {
 }
 
 .which-floor .right-side {
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .which-floor .standard-section-text {
@@ -213,35 +215,25 @@ div {
 
 /* Brochure Fan */
 .cardfan {
-    width: 300px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
 }
 
 .cardfan img {
-    max-width: 250px;
-    position: absolute; 
+    /* max-width: 250px;  */
+    /* max-height: 85%; */
+    /* position: relative; */
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
 
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.cardfan img:first-child { 
-    transform: rotate(-5deg);  
-    z-index: 4;
-}
-
-.cardfan img:nth-child(2) {
-    transform: rotate(-1deg) translateX(116px); 
-    z-index: 3;
-}
-
-.cardfan img:nth-child(3) {
-    transform: rotate(1deg) translateX(220px); 
-    z-index: 2;
-}
-
-.cardfan img:last-child { 
-    transform: rotate(2deg) translateX(318px); 
-    z-index: 1;
-}
 
 .see-our-work {
     position: relative;
