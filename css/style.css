@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    /* overflow-x: hidden; */
 }
 
 #initial-bg {
@@ -116,6 +117,8 @@ nav ul li {
     margin-bottom: 2%;
 }
 
+
+
 .text-only .text {
  /*   font-size: 17px;*/
     margin: auto;
@@ -140,6 +143,7 @@ nav ul li {
 
 .who-we-are {
     position: relative;
+    overflow: hidden;
 }
 
 .who-we-are .overlay {
@@ -170,6 +174,7 @@ nav ul li {
 
 .who-we-are .overlay .container .standard-section-text {
     width: 65%;
+    font-family: myriad-regular;
 }
 
 .which-floor {
@@ -350,7 +355,7 @@ input.control::placeholder {
     letter-spacing: 0.15em;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 890px) {
     .row1, .row2 {
         display: block;
     }
@@ -363,6 +368,31 @@ input.control::placeholder {
     .control {
         margin-bottom: 10%;
 
+    }
+
+    .text-only .standard-header {
+        font-size: 1.7em;
+    }
+
+    .who-we-are .overlay .container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .who-we-are .overlay .container .standard-header {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .who-we-are-image {
+        width: 190%;
+    }
+
+    .who-we-are .overlay .container .standard-section-text {
+        width: 40%;
+        text-align: center;
+        margin: auto;
+        font-family: myriad-regular;
     }
 }
 
