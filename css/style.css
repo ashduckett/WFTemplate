@@ -1,6 +1,5 @@
 body, html {
     height: 100%;
-    /* overflow-x: hidden; */
 }
 
 #initial-bg {
@@ -50,7 +49,6 @@ nav.mobile-menu-open {
 
 .vertical-bottom {
     position: relative;
-    /* top: 100%; */
     transform: translateY(-100%);
 }
 
@@ -64,7 +62,6 @@ nav ul li {
     display: inline;
     text-transform: uppercase;
     color: white;
-
 }
 
 .branding {
@@ -104,11 +101,10 @@ nav ul li {
     background-color: black;
     opacity: 0.5;
     display: none;
-
 }
 
 .text-only {
-    height: 400px;
+    height: 400px;  /* Try to kill this */
 }
 
 .text-only .container {
@@ -122,10 +118,7 @@ nav ul li {
     margin-bottom: 2%;
 }
 
-
-
 .text-only .text {
- /*   font-size: 17px;*/
     margin: auto;
     width: 60%;
     margin-bottom: 3%;
@@ -190,17 +183,10 @@ nav ul li {
     width: 50%;
     height: 100%;
     float: left;
-    /* margin-top: 40px; */
-
 }
 
 .which-floor .left-side {
-    /* background-color: red; */
     height: 100%;
-}
-
-.which-floor .right-side {
-    /* background-color: blue; */
 }
 
 .which-floor .standard-section-text {
@@ -220,7 +206,6 @@ nav ul li {
 }
 
 .which-floor .left-side .container {
-    /* background-color: pink; */
     width: 70%;
     margin: auto;
 }
@@ -370,8 +355,6 @@ input.control::placeholder {
     margin: 0;
 }
 
-
-
 @media screen and (max-width: 890px) {
     .row1, .row2 {
         display: block;
@@ -442,9 +425,6 @@ input.control::placeholder {
         margin-left: 0;
     }
 
-
-
-
     .scroller {
         padding-top: calc(100% * 4) !important; /* Kill important later */
     }
@@ -452,12 +432,6 @@ input.control::placeholder {
     .scroller .arrowContainer {
         display: none;
     }
-
-    .scrollerElement {
-        /* height: 33.33% !important; */
-    }
-    /* .hamburger.is-active .line:nth-child(2) { */
-    
 
     .scroller .scrollerElement:nth-child(1) {
         height: 25%;
@@ -542,8 +516,6 @@ a.btn.enquire {
     transform: translateY(-100%) translateX(-50%);
 }
 
-
-
 .moreArrowContainer {
     height: 30px;
     width: 100%;
@@ -570,14 +542,11 @@ a.btn.enquire {
     padding: 10px;
 }
 
-
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-
 
 /* ----------------- Hamburger Menu ------- */
 .hamburger .line {

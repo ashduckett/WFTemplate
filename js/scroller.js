@@ -70,20 +70,14 @@ jQuery.fn.scroller = function(scrollElements) {
 
     arrowContainer.appendChild(rightControl);
 
-    // Using this and the on ready function below feels awfully wrong
-    // However, I struggled to get the ScrollerElements to sit just outside of each side of the screen
-    // and not have them absolutely positioned, and if absolutely positioned, they won't cause their
-    // parent to grow. Worth fixing?
     var scrollerElement = $('.scrollerElement');
     
     $(this).append(arrowContainer);
 
     var duration = 1000;
 
-
     $('.leftControl').click(function() {
         event.preventDefault();
-
         
         for(var i = 0; i < elements.length; i++) {
             switch(elements[i].style.left) {
