@@ -100,7 +100,7 @@ nav ul li {
     left: 0;
     background-color: black;
     opacity: 0.5;
-    display: none;
+    pointer-events: none;
 }
 
 .text-only {
@@ -287,11 +287,11 @@ nav ul li {
 .contact {
     box-sizing: border-box;
     width: 60%;
-    height: 40em;
     margin: auto;
     display: flex;
     flex-direction: column;
     margin-top: 4em;
+    margin-bottom: 4em;
 }
 
 .row1, .row2 {
@@ -578,4 +578,15 @@ nav {
     nav.mobile-menu-open {
         background-color: rgba(0, 0, 0, 0);
     }
+}
+
+/* Footer */
+footer {
+    /* display: flex; */
+    padding: 40px 20px;
+    background-color: rgb(26, 181, 176);
+}
+
+.footer .branding {
+
 }
