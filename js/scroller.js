@@ -70,9 +70,6 @@ jQuery.fn.scroller = function(scrollElements) {
 
     arrowContainer.appendChild(rightControl);
 
-
-    
-
     // Using this and the on ready function below feels awfully wrong
     // However, I struggled to get the ScrollerElements to sit just outside of each side of the screen
     // and not have them absolutely positioned, and if absolutely positioned, they won't cause their
