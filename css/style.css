@@ -33,12 +33,11 @@ body, html {
 }
 
 nav {
-    height: 50px;
-    padding: 10px 30px;
+    height: 70px;
 }
 
 nav.mobile-menu-open {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgb(0, 0, 0);
 }
 
 .vertical-center {
@@ -422,6 +421,19 @@ input.control::placeholder {
         display: none;
     }
 
+    .mobile-menu {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .mobile-menu li {
+        padding: 0.7em 1em;
+        font-size: 2.3em;
+        text-align: center;
+        
+    }
+
     .hamburger {
         display: block;
     }
@@ -468,12 +480,19 @@ input.control::placeholder {
 
 }
 
+.desktop-menu {
+    padding-right: 20px;
+}
+
 .displayed {
     display: block;
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    /* height: 100vh; */
     color: white;
-    position: relative;
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    z-index: 1;
 }
 
 
@@ -548,11 +567,20 @@ a.btn.enquire {
     padding: 10px;
 }
 
+nav .branding {
+    padding-left: 20px;
+    font-size: 2em;
+}
+
+.hamburger {
+    padding-right: 20px;
+}
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    z-index: 1;
 }
 
 /* ----------------- Hamburger Menu ------- */
@@ -589,11 +617,11 @@ nav {
 
 /* Footer */
 footer {
-    /* display: flex; */
     padding: 40px 20px;
     background-color: rgb(26, 181, 176);
 }
 
-.footer .branding {
-
+nav {
+    position: fixed;
+    width: 100%;
 }
