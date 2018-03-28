@@ -1,21 +1,23 @@
 .scrollerElement {
-    display: inline-block;
+    /* display: inline-block; */
     position: absolute;
-    width: 33.8%;
+    width: 33.33%;
     height: 100%;
+    top: 0;
+    bottom: 0;
+    /* padding-top: 33.8%; */
 }
 
 .scroller {
     width: 100%;
+    padding-top: 33.8%;
     position: relative;
     white-space: nowrap;
     overflow: hidden;
-    line-height: 0;
 }
 
 .arrowContainer {
     width: 50px;
-    height: 50px;
     position: relative;
     margin: auto;
     top: 100%;

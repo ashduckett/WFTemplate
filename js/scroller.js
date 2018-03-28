@@ -77,21 +77,8 @@ jQuery.fn.scroller = function(scrollElements) {
     // However, I struggled to get the ScrollerElements to sit just outside of each side of the screen
     // and not have them absolutely positioned, and if absolutely positioned, they won't cause their
     // parent to grow. Worth fixing?
-    var image = $('.scrollerElement');
+    var scrollerElement = $('.scrollerElement');
     
-    $(window).resize(function() {
-        $('.scroller').css('height', image.css('width'));
-        $('.scrollerOverlay').css('height', image.css('width'));
-    });
-
-    $(document).ready(function() {
-        // This should be making the scroller the same height as the first scroller element
-        // You should actually define this yourself, and just make it a square. So base it on the width of
-        // each scroller element so they are the same? Giving you squares?
-        $('.scroller').css('height', image.css('width'));
-        $('.scrollerOverlay').css('height', image.css('width'));
-    });
- 
     $(this).append(arrowContainer);
 
     var duration = 1000;
