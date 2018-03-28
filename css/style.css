@@ -38,6 +38,10 @@ nav {
     padding: 10px 30px;
 }
 
+nav.mobile-menu-open {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 .vertical-center {
     position: relative;
     top: 50%;
@@ -363,6 +367,7 @@ input.control::placeholder {
 
 .mobile-menu {
     display: none;
+    margin: 0;
 }
 
 
@@ -432,17 +437,21 @@ input.control::placeholder {
     .hamburger {
         display: block;
     }
+
+    .who-we-are .overlay .container {
+        margin-left: 0;
+    }
+
 }
 
 .displayed {
     display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    color: white;
 }
 
-@media screen and (min-width: 890px) {
-    .mobile-menu {
-        display: none;
-    }
-}
+
 
 .contact .header {
     text-align: center;
@@ -545,4 +554,14 @@ nav {
 
 .hamburger.is-active .line:nth-child(3) {
     transform: translateY(-13px) rotate(-45deg);
+}
+
+@media screen and (min-width: 890px) {
+    .mobile-menu {
+        display: none;
+    }
+    
+    nav.mobile-menu-open {
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
