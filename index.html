@@ -231,6 +231,16 @@
             $('.mobile-menu').toggleClass('displayed');
             $('nav').toggleClass('mobile-menu-open');
         });
+    
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 100) {
+                //$('.navbar-fixed-top').addClass('opaque');
+                console.log('hit 100')
+                $('nav').addClass('block-black')
+            } else {
+                $('nav').removeClass('block-black')
+            }
+        });
 </script>
 </body>
 
