@@ -24,10 +24,10 @@
                 Western Flooring
             </div>
             <ul class="desktop-menu">
-                <li>Home</li>
-                <li>About</li>
-                <li>Gallery</li>
-                <li>Contact</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
 
             <div class="hamburger">
@@ -38,10 +38,10 @@
         </nav>
 
         <ul class="mobile-menu">
-                <li>Home</li>
-                <li>About</li>
-                <li>Gallery</li>
-                <li>Contact</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
 
         <div id="initical-bg-centerpiece" class="vertical-center">
@@ -234,8 +234,6 @@
     
         $(window).scroll(function() {
             if($(this).scrollTop() > 400) {
-                //$('.navbar-fixed-top').addClass('opaque');
-                console.log('hit 100')
                 $('nav').addClass('block-black')
             } else {
                 $('nav').removeClass('block-black')

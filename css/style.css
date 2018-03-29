@@ -37,7 +37,6 @@ nav {
 }
 
 nav.mobile-menu-open {
-    /* background-color: rgb(0, 0, 0); */
     background-color: rgb(26, 181, 176);
 }
 
@@ -280,7 +279,7 @@ nav ul li {
     text-align: center;
     width: 20%;
     position: relative;
-    top: 85%;
+    top: 75%;
     margin-left: 55%;
     width: 10em;
     
@@ -367,12 +366,10 @@ input.control::placeholder {
     margin: 0;
 }
 
-@media screen and (max-width: 1024px) {
-    .desktop-menu li {
-        padding-right: 2em;
-    }
 
-}
+
+
+
 
 @media screen and (max-width: 890px) {
     .row1, .row2 {
@@ -446,7 +443,6 @@ input.control::placeholder {
         padding: 0.7em 1em;
         font-size: 2.3em;
         text-align: center;
-        
     }
 
     .hamburger {
@@ -493,6 +489,41 @@ input.control::placeholder {
         width: 100%;
     }
 
+    .contact label {
+        margin-top: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+    .desktop-menu li {
+        padding-right: 2em;
+    }
+
+    .see-our-work .see-our-work-overlay .standard-header {
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width: 530px) {
+    .who-we-are .overlay .container .standard-section-text, .who-we-are .overlay .container .standard-header {
+        font-size: 1.3em;
+    }
+}
+
+/* .who-we-are .overlay .container .standard-section-text */
+@media screen and (max-width: 450px) {
+    .who-we-are .overlay .container .standard-section-text, .who-we-are .overlay .container .standard-header {
+        font-size: 1em;
+        
+    }
+}
+
+.mobile-menu li a, .desktop-menu li a {
+    text-decoration: none;
+    color: white;
 }
 
 .displayed {
