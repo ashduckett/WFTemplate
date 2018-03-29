@@ -16,9 +16,9 @@ body, html {
 }
 
 #initical-bg-centerpiece .standard-section-text {
-    font-size: 2.5em;
+    /* font-size: 2.5em; */
     color: white;
-    font-family: myriad-regular;
+    /* font-family: myriad-regular; */
 }
 
 #initical-bg-centerpiece .btn {
@@ -89,10 +89,6 @@ nav ul li {
     src: url('../fonts/semplicita.medium.otf');
 }
 
- div {
-     font-family: semplicita-medium; 
-} 
-
 .initial-bg-overlay {
     position: absolute;
     width: 100%;
@@ -133,7 +129,8 @@ nav ul li {
     padding: 7px 11px;
     border-radius: 4px;
     font-size: 0.8em;
-    letter-spacing: 0.17em
+    letter-spacing: 0.17em;
+    font-family: semplicita-medium;
 }
 
 .who-we-are-image {
@@ -173,7 +170,7 @@ nav ul li {
 
 .who-we-are .overlay .container .standard-section-text {
     width: 65%;
-    font-family: myriad-regular;
+    /* font-family: myriad-regular; */
 }
 
 .which-floor {
@@ -196,14 +193,14 @@ nav ul li {
 
 .standard-header {
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 3em;
     font-family: semplicita-medium;
     font-weight: bold;
 }
 
 .standard-section-text {
     font-size: 25px;
-    font-family: semplicita-medium;
+    font-family: myriad-regular;
 }
 
 .which-floor .left-side .container {
@@ -265,7 +262,7 @@ nav ul li {
 }
 
 .see-our-work .see-our-work-overlay .right .container {
-    width: 50%;
+    width: 57%;
     margin: auto;
 }
 
@@ -293,6 +290,7 @@ nav ul li {
     flex-direction: column;
     margin-top: 4em;
     margin-bottom: 4em;
+    font-family: semplicita-medium;
 }
 
 .row1, .row2 {
@@ -408,7 +406,7 @@ input.control::placeholder {
         width: 40%;
         text-align: center;
         margin: auto;
-        font-family: myriad-regular;
+        /* font-family: myriad-regular; */
     }
 
     .which-floor .right-side {
@@ -501,24 +499,24 @@ input.control::placeholder {
         padding-right: 2em;
     }
 
-    .see-our-work .see-our-work-overlay .standard-header {
+    /* .see-our-work .see-our-work-overlay .standard-header {
         font-size: 2em;
-    }
+    } */
 
 }
 
 @media screen and (max-width: 530px) {
-    .who-we-are .overlay .container .standard-section-text, .who-we-are .overlay .container .standard-header {
+    /* .who-we-are .overlay .container .standard-section-text, .who-we-are .overlay .container .standard-header {
         font-size: 1.3em;
-    }
+    } */
 }
 
 /* .who-we-are .overlay .container .standard-section-text */
 @media screen and (max-width: 450px) {
-    .who-we-are .overlay .container .standard-section-text, .who-we-are .overlay .container .standard-header {
+    /* .who-we-are .overlay .container .standard-section-text, .who-we-are .overlay .container .standard-header {
         font-size: 1em;
         
-    }
+    } */
 }
 
 .mobile-menu li a, .desktop-menu li a {
@@ -595,7 +593,7 @@ a.btn.enquire {
     text-align: center;
     text-transform: uppercase;
     color: white;
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
     letter-spacing: 0.17em;
 }
 
@@ -625,6 +623,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     z-index: 1;
+    font-family: semplicita-medium;
 }
 
 /* ----------------- Hamburger Menu ------- */
@@ -665,6 +664,8 @@ nav {
 footer {
     padding: 40px 20px;
     background-color: rgb(26, 181, 176);
+    font-family: semplicita-medium;
+    font-size: 1.5em;
 }
 
 nav {
