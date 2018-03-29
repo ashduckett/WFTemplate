@@ -16,9 +16,7 @@ body, html {
 }
 
 #initical-bg-centerpiece .standard-section-text {
-    /* font-size: 2.5em; */
     color: white;
-    /* font-family: myriad-regular; */
 }
 
 #initical-bg-centerpiece .btn {
@@ -131,6 +129,7 @@ nav ul li {
     font-size: 0.8em;
     letter-spacing: 0.17em;
     font-family: semplicita-medium;
+    display: inline-block;
 }
 
 .who-we-are-image {
@@ -199,7 +198,7 @@ nav ul li {
 }
 
 .standard-section-text {
-    font-size: 25px;
+    font-size: 2em;
     font-family: myriad-regular;
 }
 
@@ -364,6 +363,55 @@ input.control::placeholder {
     margin: 0;
 }
 
+/* headers start at 3ems, text at 2ems */
+
+
+ 
+
+@media screen and (max-width: 1300px) {
+    .standard-header {
+        font-size: 2.5em;
+    }
+
+    .standard-section-text {
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    /* .standard-header {
+        font-size: 2em;
+    } */
+
+    .standard-section-text {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 445px) {
+     .standard-header {
+        font-size: 1.2em;
+    } 
+
+
+
+    .standard-section-text {
+        font-size: 1em;
+    }
+
+    .text-only .btn {
+        margin-top: 2em;
+    }
+
+    .text-only .standard-header {
+        margin-bottom: 1em;
+    }
+
+    .who-we-are .overlay .container .standard-section-text {
+        width: 55%;
+    }
+}
 
 
 
@@ -385,7 +433,7 @@ input.control::placeholder {
     }
 
     .text-only .standard-header {
-        font-size: 1.7em;
+        /* font-size: 1.7em; */
     }
 
     .who-we-are .overlay .container {
@@ -395,7 +443,7 @@ input.control::placeholder {
 
     .who-we-are .overlay .container .standard-header {
         text-align: center;
-        font-size: 2em;
+        /* font-size: 2em; */
     }
 
     .who-we-are-image, .see-our-work .see-our-work-image {
@@ -403,7 +451,7 @@ input.control::placeholder {
     }
 
     .who-we-are .overlay .container .standard-section-text {
-        width: 40%;
+        /* width: 40%; */
         text-align: center;
         margin: auto;
         /* font-family: myriad-regular; */
@@ -491,6 +539,10 @@ input.control::placeholder {
         margin-top: 0;
     }
 
+    footer {
+        text-align: center;
+    }
+
 }
 
 
@@ -522,6 +574,7 @@ input.control::placeholder {
 .mobile-menu li a, .desktop-menu li a {
     text-decoration: none;
     color: white;
+    font-family: semplicita-medium;
 }
 
 .displayed {
@@ -535,6 +588,7 @@ input.control::placeholder {
     width: 100%;
     z-index: 1;
     background-color: rgb(26, 181, 176);
+
 }
 
 
@@ -595,6 +649,7 @@ a.btn.enquire {
     color: white;
     /* font-size: 0.9em; */
     letter-spacing: 0.17em;
+    font-family: semplicita-medium;
 }
 
 .moreArrowContainer .down {
