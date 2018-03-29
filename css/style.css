@@ -9,7 +9,7 @@ body, html {
 }
 
 #initical-bg-centerpiece {
-    width: 27%;
+    width: 35%;
     height: 30%;
     margin: auto;
     text-align: center;
@@ -17,17 +17,16 @@ body, html {
 
 #initical-bg-centerpiece .standard-section-text {
     color: white;
+    font-size: 3em;
 }
 
 #initical-bg-centerpiece .btn {
-    display: block;
     color: white;
     border-color: white;
-    width: 50%;
     margin: auto;
     margin-top: 2.5em;
-    width: 70%;
     padding: 17px;
+    white-space: nowrap;
 }
 
 nav {
@@ -432,10 +431,6 @@ input.control::placeholder {
 
     }
 
-    .text-only .standard-header {
-        /* font-size: 1.7em; */
-    }
-
     .who-we-are .overlay .container {
         width: 100%;
         text-align: center;
@@ -443,7 +438,6 @@ input.control::placeholder {
 
     .who-we-are .overlay .container .standard-header {
         text-align: center;
-        /* font-size: 2em; */
     }
 
     .who-we-are-image, .see-our-work .see-our-work-image {
@@ -451,10 +445,8 @@ input.control::placeholder {
     }
 
     .who-we-are .overlay .container .standard-section-text {
-        /* width: 40%; */
         text-align: center;
         margin: auto;
-        /* font-family: myriad-regular; */
     }
 
     .which-floor .right-side {
@@ -541,6 +533,10 @@ input.control::placeholder {
 
     footer {
         text-align: center;
+    }
+
+    #initical-bg-centerpiece {
+        width: 70%;
     }
 
 }
