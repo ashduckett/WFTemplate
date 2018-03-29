@@ -539,6 +539,10 @@ input.control::placeholder {
         width: 70%;
     }
 
+    .dots {
+        display: none;
+    }
+
 }
 
 
@@ -723,3 +727,28 @@ nav {
     position: fixed;
     width: 100%;
 }
+
+.dots {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translateY(-100%) translateX(-100%);
+    height: 5%;
+    width: 5%;
+    z-index: 10000000000000000000;
+    white-space: nowrap;
+    margin-right: 15px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .dot:nth-child(1) {
+      opacity: 0.4;
+  }
