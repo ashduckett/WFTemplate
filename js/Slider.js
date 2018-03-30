@@ -101,16 +101,21 @@ jQuery.fn.slider = function(prefix, min, max, change) {
 
 
     //     // Get hold of the element you're dragging's left
-    //     var left = $(slidingElement.element).position().left;
+         var left = $(slidingElement.element).position().left;
     //     console.log('left', left)
 
     //     // Get hold of the width of the container minus the width of the element
-    //     var areaToPlayWith = parseInt($(container).width() - $(slidingElement.element).width());
+         var areaToPlayWith = parseInt($(container).width() - $(slidingElement.element).width());
     //     console.log('area to play with', areaToPlayWith);
     //     // Find the percentage of how much you've dragged through
-    //     var percentage = parseInt(left / areaToPlayWith * 100); 
+        
+    
+        // I think you need the old % not the new one!!! Don't calculate a new one,
+        // thus, you might be able to get it based on the value??? Or if you have the
+        // variable lying around, that would be even better.
+         var percentage = parseInt(left / areaToPlayWith * 100); 
 
-    //     console.log('percentage:', percentage);
+         console.log('percentage:', percentage);
     //    // $('.slidingElement').css('left', percentage + '%');
 
     //   // $('.slidingElement').css('left', 'calc(' + percentage + '% - ' + $('.slidingElement').width() / 2 + 'px)' );
