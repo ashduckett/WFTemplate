@@ -1,8 +1,4 @@
 jQuery.fn.slider = function(prefix, min, max, change) {
-    // Ensure we have the slider class for the CSS
-    // if (!$(this).hasClass('slider')) {
-    //     $(this).addClass('slider');
-    // }
 
     // Create main container for control
     // In this way the user of this control can specify the length of
@@ -76,11 +72,6 @@ jQuery.fn.slider = function(prefix, min, max, change) {
 
             // Width needs calculating
             $('.progressSide').css('width', $(slidingElement.element).position().left + 1);
-
-            //<i class="arrow right"></i>
-
-
-
         }
 
        

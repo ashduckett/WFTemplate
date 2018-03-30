@@ -73,4 +73,10 @@ $(document).ready(function() {
             $('nav').removeClass('block-black')
         }
     });
+
+    $(".initial-bg-more").click(function(event){
+        var scrollToHere = $('.scroller').offset().top - 70;
+
+        $('html, body').animate({scrollTop: scrollToHere}, 800);
+    });
 });

@@ -2,6 +2,16 @@ body, html {
     height: 100%;
 }
 
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
+
 #initial-bg {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0), transparent), url("../img/carpets.png") no-repeat center; 
     height: 100%;
@@ -27,10 +37,6 @@ body, html {
     margin-top: 2.5em;
     padding: 17px;
     white-space: nowrap;
-}
-
-nav {
-    height: 70px;
 }
 
 nav.mobile-menu-open {
@@ -168,7 +174,6 @@ nav ul li {
 
 .who-we-are .overlay .container .standard-section-text {
     width: 65%;
-    /* font-family: myriad-regular; */
 }
 
 .which-floor {
@@ -339,6 +344,7 @@ input.control {
     text-transform: uppercase;
     font-size: 0.8em;
     letter-spacing: 0.15em;
+
 }
 
 input.control::placeholder {
@@ -346,10 +352,17 @@ input.control::placeholder {
     font-size: 0.8em;
     color: rgb(193, 191, 191);
     letter-spacing: 0.15em;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 .block-black {
-    /* background-color: black; */
     background-color: rgb(26, 181, 176);
 }
 
@@ -361,11 +374,6 @@ input.control::placeholder {
     display: none;
     margin: 0;
 }
-
-/* headers start at 3ems, text at 2ems */
-
-
- 
 
 @media screen and (max-width: 1300px) {
     .standard-header {
@@ -529,6 +537,8 @@ input.control::placeholder {
 
     .contact label {
         margin-top: 0;
+
+
     }
 
     footer {
@@ -550,25 +560,6 @@ input.control::placeholder {
     .desktop-menu li {
         padding-right: 2em;
     }
-
-    /* .see-our-work .see-our-work-overlay .standard-header {
-        font-size: 2em;
-    } */
-
-}
-
-@media screen and (max-width: 530px) {
-    /* .who-we-are .overlay .container .standard-section-text, .who-we-are .overlay .container .standard-header {
-        font-size: 1.3em;
-    } */
-}
-
-/* .who-we-are .overlay .container .standard-section-text */
-@media screen and (max-width: 450px) {
-    /* .who-we-are .overlay .container .standard-section-text, .who-we-are .overlay .container .standard-header {
-        font-size: 1em;
-        
-    } */
 }
 
 .mobile-menu li a, .desktop-menu li a {
@@ -579,19 +570,13 @@ input.control::placeholder {
 
 .displayed {
     display: block;
-    /* background-color: rgb(0, 0, 0);
-     */
-    /* height: 100vh; */
     color: white;
     position: fixed;
     top: 70px;
     width: 100%;
     z-index: 1;
     background-color: rgb(26, 181, 176);
-
 }
-
-
 
 .contact .header {
     text-align: center;
@@ -607,6 +592,14 @@ input.control::placeholder {
     letter-spacing: 0.15em;
     font-size: 0.8em;
     display: block;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 .dropdownTextHolder.unselected {
@@ -627,14 +620,13 @@ a.btn.enquire {
 }
 
 #initial-bg .initial-bg-more {
-    width: 100%;
-
     top: 98%;
     left: 50%;
     margin: auto;
     display: block;
     position: absolute;
     transform: translateY(-100%) translateX(-50%);
+    cursor: pointer;
 }
 
 .moreArrowContainer {
@@ -647,7 +639,6 @@ a.btn.enquire {
     text-align: center;
     text-transform: uppercase;
     color: white;
-    /* font-size: 0.9em; */
     letter-spacing: 0.17em;
     font-family: semplicita-medium;
 }
@@ -679,6 +670,10 @@ nav {
     justify-content: space-between;
     z-index: 1;
     font-family: semplicita-medium;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    transition: ease-in 0.1s background-color;
 }
 
 /* ----------------- Hamburger Menu ------- */
@@ -709,8 +704,6 @@ nav {
     }
     
     nav.mobile-menu-open {
-        /* background-color: rgba(0, 0, 0, 0);
-        ba */
         background-color: rgb(26, 181, 176);
     }
 }
@@ -723,21 +716,15 @@ footer {
     font-size: 1.5em;
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-}
-
 .dots {
     position: absolute;
     top: 100%;
     left: 100%;
-    transform: translateY(-100%) translateX(-100%);
+    transform: translateY(-100%) translateX(-110%);
     height: 5%;
     width: 5%;
-    z-index: 10000000000000000000;
+    z-index: 1;
     white-space: nowrap;
-    
 }
 
 .dot {
