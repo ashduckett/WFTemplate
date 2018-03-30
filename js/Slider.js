@@ -31,7 +31,7 @@ jQuery.fn.slider = function(prefix, min, max, change) {
             // We now have a percentage! How the hell do we use it?!
 
             // First find the difference between our first and second number.
-            var difference = max - min; // this should be 99
+            var difference = max - min;
 
             // Then we find out what value of that difference is based on the percentage we have
             var value = difference / 100 * percentage;
@@ -75,6 +75,54 @@ jQuery.fn.slider = function(prefix, min, max, change) {
         }
 
        
+
+
+    });
+    console.log('attaching');
+    // Apparently you can't attach a resize event to a DOM element, so here I'll attach one to the document instead
+    $(window).resize(function() {
+    //     console.log('resizing');
+
+    //     // The width of the main containing div changes automatically so this is something that doesn't need adjusting
+
+    //     // Ideally, we'll be able to take the current percentage, and use that to set the position of the sliding element
+    //     console.log('min is ', min);
+    //     console.log('max is ', max);
+
+    //     // This works so all we really need is a %
+    //     //$('.slidingElement').css('left', 'calc(50% - ' + $('.slidingElement').width() / 2 + 'px)' );
+
+
+
+    //     // Then grab the current value
+
+
+    //     // Find out, as a percentage, how much of the containing div that value represents
+
+
+    //     // Get hold of the element you're dragging's left
+    //     var left = $(slidingElement.element).position().left;
+    //     console.log('left', left)
+
+    //     // Get hold of the width of the container minus the width of the element
+    //     var areaToPlayWith = parseInt($(container).width() - $(slidingElement.element).width());
+    //     console.log('area to play with', areaToPlayWith);
+    //     // Find the percentage of how much you've dragged through
+    //     var percentage = parseInt(left / areaToPlayWith * 100); 
+
+    //     console.log('percentage:', percentage);
+    //    // $('.slidingElement').css('left', percentage + '%');
+
+    //   // $('.slidingElement').css('left', 'calc(' + percentage + '% - ' + $('.slidingElement').width() / 2 + 'px)' );
+
+    //     console.log('container width: ', $(container).width());
+
+    //   // Find that percentage of the parent's width
+    //   //var location = $('.sliderControl').width() / 100 * percentage;
+    //   // console.log('location ', location)
+    //   $('.slidingElement').css('left', percentage + '%');
+
+
 
 
     });
