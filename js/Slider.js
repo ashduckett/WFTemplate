@@ -8,6 +8,8 @@ jQuery.fn.slider = function(prefix, min, max, change) {
     var self = $(this);
     // To the container we add a sliding element
 
+    var total = 0;
+
     var slidingElement = new Draggable({
         yPos: -1,
         xPos: 0,
@@ -37,7 +39,7 @@ jQuery.fn.slider = function(prefix, min, max, change) {
             var value = difference / 100 * percentage;
             
             // It seems to roll over sometimes so cap it at the max
-            var total = (min + value > max ? max : min + value);
+            total = (min + value > max ? max : min + value);
 
             // Now you need to get this printing on the element. Either to the right of it or to the left of it
             // where ever there is room.
@@ -78,56 +80,28 @@ jQuery.fn.slider = function(prefix, min, max, change) {
 
 
     });
-    console.log('attaching');
-    // Apparently you can't attach a resize event to a DOM element, so here I'll attach one to the document instead
+
     $(window).resize(function() {
-    //     console.log('resizing');
 
-    //     // The width of the main containing div changes automatically so this is something that doesn't need adjusting
-
-    //     // Ideally, we'll be able to take the current percentage, and use that to set the position of the sliding element
-    //     console.log('min is ', min);
-    //     console.log('max is ', max);
-
-    //     // This works so all we really need is a %
-    //     //$('.slidingElement').css('left', 'calc(50% - ' + $('.slidingElement').width() / 2 + 'px)' );
-
-
-
-    //     // Then grab the current value
-
-
-    //     // Find out, as a percentage, how much of the containing div that value represents
-
-
-    //     // Get hold of the element you're dragging's left
-         var left = $(slidingElement.element).position().left;
-    //     console.log('left', left)
-
-    //     // Get hold of the width of the container minus the width of the element
-         var areaToPlayWith = parseInt($(container).width() - $(slidingElement.element).width());
-    //     console.log('area to play with', areaToPlayWith);
-    //     // Find the percentage of how much you've dragged through
-        
+        // Get hold of the element you're dragging's left
+        var left = $(slidingElement.element).position().left;
     
-        // I think you need the old % not the new one!!! Don't calculate a new one,
-        // thus, you might be able to get it based on the value??? Or if you have the
-        // variable lying around, that would be even better.
-         var percentage = parseInt(left / areaToPlayWith * 100); 
+        // Get hold of the width of the container minus the width of the element
+        var areaToPlayWith = parseInt($(container).width() - $(slidingElement.element).width());
 
-         console.log('percentage:', percentage);
-    //    // $('.slidingElement').css('left', percentage + '%');
+        // Get the difference between the min and max so we know what we're finding a % of
+        var difference = max - min;
 
-    //   // $('.slidingElement').css('left', 'calc(' + percentage + '% - ' + $('.slidingElement').width() / 2 + 'px)' );
+        // Now find out what percentage of difference we're at
+        var percent = parseInt(total / difference * 100);
+        var pixelValue = areaToPlayWith / 100 * percent;
 
-    //     console.log('container width: ', $(container).width());
+        // Use this value to position the slider
+        $('.slidingElement').css('left', pixelValue);
 
-    //   // Find that percentage of the parent's width
-    //   //var location = $('.sliderControl').width() / 100 * percentage;
-    //   // console.log('location ', location)
-    //   $('.slidingElement').css('left', percentage + '%');
+        $('.progressSide').css('width', $(slidingElement.element).position().left + 1);
 
-
+        positionAndShowCurrentValue();
 
 
     });
