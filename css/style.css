@@ -96,7 +96,7 @@ nav ul li {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
+    top: 43px;
     left: 0;
     background-color: black;
     opacity: 0.5;
@@ -368,6 +368,11 @@ input.control::placeholder {
 }
 
 .block-black {
+    /* background-color: rgb(26, 181, 176); */
+    background-color: rgb(26, 181, 176);
+}
+
+.block-turquoise {
     background-color: rgb(26, 181, 176);
 }
 
@@ -570,7 +575,7 @@ input.control::placeholder {
     display: block;
     color: white;
     position: fixed;
-    top: 70px;
+    top: 117px;
     width: 100%;
     z-index: 1;
     background-color: rgb(26, 181, 176);
@@ -672,6 +677,7 @@ nav {
     width: 100%;
     height: 70px;
     transition: ease-in 0.1s background-color;
+    top: 47px;
 }
 
 /* ----------------- Hamburger Menu ------- */
@@ -743,3 +749,42 @@ footer {
       overflow: auto;
       height: 40%;
   }
+
+.banner {
+    width: 100%;
+    height: 42px;
+    background-color: rgb(26, 181, 176);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    color: white;
+    font-family: semplicita-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.27em;
+}
+
+.banner .images {
+    height: 100%;
+    height: 60%;
+    margin-left: 25px;
+}
+
+.gradient { 
+    width: 100%;
+    height: 5px;
+    /* background-color: yellow; */
+    background: linear-gradient(to right, rgba(26, 181, 176, 1), rgba(0, 0, 0, 1));
+    position: absolute;
+    top: 100%;
+    /* transform: translateY(-100%); */
+}
+
+.banner .images img {
+    height: 100%;
+}
+
+.close-banner, .open-banner {
+    cursor: pointer;
+}
