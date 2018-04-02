@@ -12,7 +12,12 @@ jQuery.fn.combo = function(initialPlaceholderText, items) {
     // Allow styling of unselected item state
     textHolder.classList.add('unselected');
 
-    textHolder.innerText = initialPlaceholderText;
+    var actualText = document.createElement('div');
+    actualText.innerText = initialPlaceholderText;
+    actualText.classList.add('actual-text');
+    textHolder.appendChild(actualText);
+
+    //textHolder.innerText = initialPlaceholderText;
 
     $(this).append(textHolder);
 
@@ -24,7 +29,7 @@ jQuery.fn.combo = function(initialPlaceholderText, items) {
     arrowIcon.classList.add('arrow');
     arrowIcon.classList.add('down');
     dropDownButton.append(arrowIcon);
-    $(this).append(dropDownButton);
+    $(textHolder).append(dropDownButton);
 
     var dropDownContent = document.createElement('div');
     dropDownContent.classList.add('dropdownContent');
@@ -39,12 +44,10 @@ jQuery.fn.combo = function(initialPlaceholderText, items) {
     
         $(dropDownItem).click(function(event) {
             event.preventDefault();
-            textHolder.innerText = $(this).text();
-            $(textHolder).css('color', 'black');
             $(dropDownContent).toggle();
+            $(this).parent().parent().find('.actual-text').text($(this).text());
+            $(this).parent().parent().find('.actual-text').css('color', 'black');
         });
-
-
         dropDownContent.appendChild(dropDownItem);
     }
 
