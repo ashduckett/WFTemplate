@@ -41,7 +41,7 @@ body, html {
 }
 
 nav.mobile-menu-open {
-    background-color: rgb(26, 181, 176);
+    background-color: rgb(105, 0, 189);
 }
 
 .vertical-center {
@@ -360,6 +360,7 @@ input.control::placeholder {
     font-size: 0.8em;
     color: rgb(193, 191, 191);
     letter-spacing: 0.15em;
+    /* line-height: 100%; */
     
 
     -webkit-touch-callout: none; /* iOS Safari */
@@ -583,7 +584,7 @@ input.control::placeholder {
     top: 117px;
     width: 100%;
     z-index: 1;
-    background-color: rgb(26, 181, 176);
+    background-color: rgb(105, 0, 189);
 }
 
 .contact .header {
@@ -795,4 +796,29 @@ footer {
 
 .close-banner, .open-banner {
     cursor: pointer;
+}
+
+@media (max-width: 450px) { 
+    .banner {
+        font-size: 0.6rem;
+    }
+
+    nav .branding {
+        font-size: 1.3em;
+    }
+}
+
+input {
+    line-height: 30px;
+    padding-left: 0.8em;
+}
+
+.actual-text {
+    padding-left: 0.8em;
+    text-align: left;
+    
+}
+
+.bannerText {
+    padding-left: 20px;
 }
